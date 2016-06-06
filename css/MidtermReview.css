@@ -1,0 +1,51 @@
+var fGrade = 0;
+			var dGrade = 0;
+			var cGrade = 0;
+			var bGrade = 0;
+			var aGrade = 0;
+
+			for (var i =0; i<entries.length; i++){
+				var currentObject = entries[i];
+				var content = currentObject.content.$t;
+				content = content.split(",");
+				var itemToRead = "";
+
+				var rowGrade = 0;
+				for (var k = 0; k<content.length; k++) {
+					var index = content[k].search(":")
+					itemToRead = content[k].substring(index+2, content[k].length);
+					if (itemToRead == correctAnswers[k]) {
+						rowGrade++;
+					}
+
+					
+				}
+				console.log(correctAnswers[k]);
+				console.log(rowGrade);
+				rowGrade = rowGrade / correctAnswers.length;
+				
+				if (rowGrade >= 0 && rowGrade <= 0.60){
+					fGrade++;
+					$("#jumbotronGrade").html("Your Grade: F");
+				} else if (rowGrade > 0.60 && rowGrade <= 0.70) {
+					dGrade++;
+					$("#jumbotronGrade").html("Your Grade: D");
+				} else if (rowGrade > 0.70 && rowGrade <= 0.80) {
+					cGrade++;
+					$("#jumbotronGrade").html("Your Grade: C");
+				} else if (rowGrade > 0.80 && rowGrade <= 0.90) {
+					bGrade++;
+					$("#jumbotronGrade").html("Your Grade: B");
+				} else if (rowGrade >0.90 && rowGrade <= 1.00) {
+					aGrade++;
+					$("#jumbotronGrade").html("Your Grade: A");
+				}
+				var dataTable = google.visualization.arrayToDataTable([
+					['Grade', 'Students'],
+					['F', fGrade],
+					['D', dGrade],
+					['C', cGrade],
+					['B', bGrade],
+					['A', aGrade],
+					]);
+				drawChart(dataTable);
