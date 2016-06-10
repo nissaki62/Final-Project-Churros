@@ -56,38 +56,7 @@
 
  <!-- Bar Chart -->
 
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load("current", {packages:['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ["Element", "Density", { role: "style" } ],
-        ["Copper", 8.94, "#b87333"],
-        ["Silver", 10.49, "silver"],
-        ["Gold", 19.30, "gold"],
-        ["Platinum", 21.45, "color: #e5e4e2"]
-      ]);
-
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-        title: "Density of Precious Metals, in g/cm^3",
-        width: 600,
-        height: 400,
-        bar: {groupWidth: "95%"},
-        legend: { position: "none" },
-      };
-      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-      chart.draw(view, options);
-  }
-  </script>
+ 
  
 </head>
 
@@ -143,8 +112,13 @@
       <hr>
     
       <div class="row">
-        <div class="col-md-12">
-          <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+        <div class="col-md-6">
+          <h2>Information</h2>
+          <p>Above you will see a chart that tells you the places in the US that have the most churros stands. Most of these are located at in-state ausement parks and other party locations. Since there is not a lot of information about churros on the internet we will be sending out a survey soon in order to gather more information about churros. We will use this information to improve our website and the information that we will display in these charts.</p>
+        </div>
+        <div class="col-md-6">
+          <h2>Charts</h2>
+          <p>This page is reserved for charts about churros. These charts are from a multitude of different sources and the information was gathered from around the internet. Eventually we could possibly send out a survey in order to obtain more information about churros from out users.</p>
         </div>
      </div>
 
@@ -152,8 +126,7 @@
      
      <div class="row">
         <div class="col-md-12">
-          <h2>Mission</h2>
-          <p>The mission of this website is to create a place where people are able to go and share their experiences and love for the food churros with other people that also like the food. We also want to introduce the food to more people as it is not well known and we want to make it so that more people know what churros are as they are missing out if they do not.</p>
+          
           
         </div>
       </div>
