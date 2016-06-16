@@ -53,11 +53,79 @@ if(isset($_POST["submit"])) {
       </div>
     </nav>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
+     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="https://i.ytimg.com/vi/Rcp8-7NP06M/maxresdefault.jpg" alt="Churros with chocolate">
+            </div>
+
+            <div class="item">
+                <img src="http://www.miamitiamo.com/wp-content/uploads/2014/12/Churros.jpg" alt="Who does not like churros??">
+            </div>
+
+            <div class="item">
+                <img src="https://i.ytimg.com/vi/p3yzix7ud08/maxresdefault.jpg" alt="How can you not like churros?">
+            </div>
+
+            <div class="item">
+                <img src="https://i.ytimg.com/vi/6J_kr821kd8/maxresdefault.jpg" alt="So beautiful">
+            </div>
+
+            <div class="item">
+                <img src="https://i.ytimg.com/vi/1_rmlgfBie0/maxresdefault.jpg" alt="So beautiful">
+            </div>
+
+            <div class="item">
+                <img src="https://i.ytimg.com/vi/jg2lWZNVRU8/maxresdefault.jpg" alt="So beautiful">
+            </div>
+
+            <div class="item">
+                <img src="https://i.ytimg.com/vi/5bEFE6Mw-fM/maxresdefault.jpg" alt="So beautiful">
+            </div>
+        </div>
+
+    <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+<div class="container">
+  <div class="row">
+    <div cass="col-md-12">
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        <h4>Select image to upload:</h4>
+        <input type="file" name="fileToUpload" id="fileToUpload" >
+        <input type="submit" value="Upload Image" name="submit" >
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 
 </body>
 </html>
@@ -76,6 +144,7 @@ if(isset($_POST["submit"])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
+    
 
 
 
