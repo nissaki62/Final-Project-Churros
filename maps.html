@@ -11,8 +11,6 @@
     <script type="text/javascript">
     google.charts.load("current", {packages:["map"]});
       google.charts.setOnLoadCallback(drawChart);
-
-
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Lat', 'Long', 'Name','Marker'],
@@ -26,9 +24,7 @@
           [41.056176,-73.538188,'<a href="http://www.cantinastamford.com/"> Cantina Tequila Bar & Southwest Grill </a>', 'green'],
           [41.056422,-73.538863,'<a href="http://www.picantefreshmexicangrills.com/"> Picante! Fresh Mexican Grill </a>', 'green']
 			]);
-
       var url = 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/';
-
       var options = {
         zoomLevel: 12,
         showTip: true,
@@ -49,10 +45,8 @@
         }
       };
       var map = new google.visualization.Map(document.getElementById('map_div'));
-
       map.draw(data, options);
     }
-
     </script>
   </head>
 
@@ -86,8 +80,40 @@
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
-      <div id="map_div" style="height: 500px; width: 900px"></div>
+      <div id="map_div" style="height: 500px; width: 1100px"></div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Locations</h2>
+          <p>Pink Pin = your location</p>
+          <p>Blue Pin = restaurants in your town</p>
+          <p>Green Pin = restaurants out of town</p>
+          
+        </div>
+        <div class="col-md-4">
+          <h2>How This Works</h2>
+          <p>Charts is a section where fans can find many charts on churros. This is an information center for fans that want to learn more about churros and where they can find them. </p>
+          
+       </div>
+        <div class="col-md-4">
+          <h2>About This Map</h2>
+          <p>USE THIS MAP AND HAVE FUN.</p>
+          <p>Map version: pre_Alpha 1.0</p>
+          
+        </div>
+      </div>
+
   </body>
+
+  <hr>
+
+
+  <footer>
+        <p> Status API Training Shop Blog About </p>
+        <p> © 2016 Aidanswebsite, Inc. Terms Privacy Security Contact Help </p>
+      </footer>
 </html>
 
 
@@ -102,8 +128,6 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
 
-Status API Training Shop Blog About
-© 2016 Aidanswebsite, Inc. Terms Privacy Security Contact Help
 
 
 
